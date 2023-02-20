@@ -1,0 +1,347 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MessagesService</name>
+    </assembly>
+    <members>
+        <member name="T:MessagesService.Controllers.MessagesServiceInfoController">
+            <summary>
+            Основной контроллер веб-приложения, реализующий работу различных запросов сервиса сообщений.
+            </summary>
+        </member>
+        <member name="P:MessagesService.Controllers.MessagesServiceInfoController.Users">
+            <summary>
+            Свойство, хранящее информацию о пользователях.
+            </summary>
+        </member>
+        <member name="P:MessagesService.Controllers.MessagesServiceInfoController.Messages">
+            <summary>
+            Свойство, хранящее информацию о сообщениях.
+            </summary>
+        </member>
+        <member name="M:MessagesService.Controllers.MessagesServiceInfoController.GenerateAndPostInitialUsersAndMessages">
+            <summary>
+            Инициализирует пользователей и сообщения случайным образом.
+            </summary>
+            <response code="200">Пользователи и сообщения были успешно инициализированы.</response>
+            <response code="400">Пользователи или сообщения уже существуют. Невозможно выполнить операцию.</response>
+            <returns>Ошибку в случае некорректного действия или успех выполненной операции.</returns>
+        </member>
+        <member name="M:MessagesService.Controllers.MessagesServiceInfoController.GetUserInfoByEmail(System.String)">
+            <summary>
+            Получает информацию о пользователе по его идентификатору email.
+            </summary>
+            <remarks>Возвращает единственного пользователя.</remarks>
+            <param name="email">Электронный адрес пользователя.</param>
+            <response code="200">Пользователь был успешно найден.</response>
+            <response code="400">Был введен некорректный email.</response>
+            <response code="404">Пользователь с введенным email не найден.</response>
+            <returns>Ошибку в случае некорректного запроса или успех о выполненной операции.</returns>
+        </member>
+        <member name="M:MessagesService.Controllers.MessagesServiceInfoController.GetAllUsersInfo(MessagesService.Models.PaginationModel)">
+            <summary>
+            Получает всех пользователей, поддерживает функционал для постраничной выборки.
+            </summary>
+            <remarks>Для валидности значений параметров пагинации используйте: integer limit со значением &#x2265; 
+            1 и integer offset со значением &#x2265; 0.</remarks>
+            <param name="paginationModel">Объект пагинации, поступающий в виде query-запроса.</param>
+            <response code="200">Пользователи были успешно найдены.</response>
+            <response code="400">Некорректные значения параметров пагинации (limit / offset).</response>
+            <response code="404">Пользователи не найдены.</response>
+            <returns>Ошибку в случае некорректного запроса или успех о выполненной операции.</returns>
+        </member>
+        <member name="M:MessagesService.Controllers.MessagesServiceInfoController.GetMessagesBySenderAndReceiverId(System.String,System.String)">
+            <summary>
+            Получает сообщения по идентификатору отправителя и получателя.
+            </summary>
+            <param name="senderId">Идентификатор отправителя.</param>
+            <param name="receiverId">Идентификатор получателя.</param>
+            <response code="200">Сообщения были успешно найдены.</response>
+            <response code="404">Сообщения или отправитель / получатель не найдены.</response>
+            <returns>Ошибку в случае некорректного запроса или успех о выполненной операции.</returns>
+        </member>
+        <member name="M:MessagesService.Controllers.MessagesServiceInfoController.GetMessagesBySenderId(System.String)">
+            <summary>
+            Получает сообщения по идентификатору отправителя.
+            </summary>
+            <param name="senderId">Идентификатор отправителя.</param>
+            <response code="200">Сообщения были успешно найдены.</response>
+            <response code="404">Сообщения или отправитель не найдены.</response>
+            <returns>Ошибку в случае некорректного запроса или успех о выполненной операции.</returns>
+        </member>
+        <member name="M:MessagesService.Controllers.MessagesServiceInfoController.GetMessagesByReceiverId(System.String)">
+            <summary>
+            Получает сообщения по идентификатору получателя.
+            </summary>
+            <param name="receiverId">Идентификатор получателя.</param>
+            <response code="200">Сообщения были успешно найдены.</response>
+            <response code="404">Сообщения или получатель не найдены.</response>
+            <returns>Ошибку в случае некорректного запроса или успех о выполненной операции.</returns>
+        </member>
+        <member name="M:MessagesService.Controllers.MessagesServiceInfoController.PostNewUser(MessagesService.Models.UserModel)">
+            <summary>
+            Добавляет информацию о новом пользователе.
+            </summary>
+            <param name="newUserModel">Объект, содержащий информацию о новом пользователе.</param>
+            <response code="200">Информация о новом пользователе была успешно добавлена.</response>
+            <response code="400">Был введен некорректный email, или пользователь с таким email уже существует.</response>
+            <returns>Ошибку в случае некорректного запроса или успех о выполненной операции.</returns>
+        </member>
+        <member name="M:MessagesService.Controllers.MessagesServiceInfoController.SendNewMessage(MessagesService.Models.MessageModel)">
+            <summary>
+            Добавляет информацию о новом сообщении.
+            </summary>
+            <param name="newMessageModel">Объект, содержащий информацию о новом сообщении.</param>
+            <response code="200">Информация о новом сообщении была успешно добавлена.</response>
+            <response code="400">Отправитель или получатель сообщения не найдены.</response>
+            <returns>Ошибку в случае некорректного запроса или успех о выполненной операции.</returns>
+        </member>
+        <member name="T:MessagesService.Generator">
+            <summary>
+            Класс, описывающий генератор, который инициализирует пользователей и сообщения.
+            </summary>
+        </member>
+        <member name="M:MessagesService.Generator.GenerateUsers">
+            <summary>
+            Метод, отвечающий за генерацию пользователей.
+            </summary>
+            <returns>Список сгенерированных пользователей.</returns>
+        </member>
+        <member name="M:MessagesService.Generator.GenerateMessages">
+            <summary>
+            Метод, отвечающий за генерацию сообщений.
+            </summary>
+            <returns>Список сгенерированных сообщений.</returns>
+        </member>
+        <member name="M:MessagesService.Generator.CreateUserName">
+            <summary>
+            Метод, отвечающий за создание имени пользователя.
+            </summary>
+            <returns>Имя пользователя.</returns>
+        </member>
+        <member name="M:MessagesService.Generator.CreateUserEmail">
+            <summary>
+            Метод, отвечающий за создание электронного адреса пользователя.
+            </summary>
+            <returns>Электронный адрес пользователя.</returns>
+        </member>
+        <member name="M:MessagesService.Generator.CreateMessageSubject">
+            <summary>
+            Метод, отвечающий за создание темы сообщения.
+            </summary>
+            <returns>Тему сообщения.</returns>
+        </member>
+        <member name="M:MessagesService.Generator.CreateMessage">
+            <summary>
+            Метод, отвечающий за создание текста сообщения.
+            </summary>
+            <returns>Текст сообщения.</returns>
+        </member>
+        <member name="M:MessagesService.Generator.CreateAndReturnSenderAndReceiverIds">
+            <summary>
+            Метод, отвечающий за создание индентификаторов отправителя и получателя.
+            </summary>
+            <returns>Id отправителя и получателя.</returns>
+        </member>
+        <member name="T:MessagesService.Models.MessageModel">
+            <summary>
+            Модель информации о сообщении.
+            </summary>
+        </member>
+        <member name="M:MessagesService.Models.MessageModel.#ctor">
+            <summary>
+            Беспараметрический конструктор.
+            </summary>
+        </member>
+        <member name="M:MessagesService.Models.MessageModel.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Конструктор класса, необходимый для присваивания значений свойствам.
+            </summary>
+            <param name="subject">Тема сообщения.</param>
+            <param name="message">Текст сообщения.</param>
+            <param name="senderId">Id отправителя сообщения.</param>
+            <param name="receiverId">Id получателя сообщения.</param>
+        </member>
+        <member name="P:MessagesService.Models.MessageModel.Subject">
+            <summary>
+            Тема сообщения.
+            </summary>
+        </member>
+        <member name="P:MessagesService.Models.MessageModel.Message">
+            <summary>
+            Текст сообщения.
+            </summary>
+        </member>
+        <member name="P:MessagesService.Models.MessageModel.SenderId">
+            <summary>
+            Id отправителя сообщения.
+            </summary>
+        </member>
+        <member name="P:MessagesService.Models.MessageModel.ReceiverId">
+            <summary>
+            Id получателя сообщения.
+            </summary>
+        </member>
+        <member name="M:MessagesService.Models.MessageModel.ToString">
+            <summary>
+            Переопределенный метод ToString().
+            </summary>
+            <returns>Строка с информацией об актуальных данных о новом сообщении.</returns>
+        </member>
+        <member name="T:MessagesService.Models.PaginationModel">
+            <summary>
+            Модель постраничной выборки.
+            </summary>
+        </member>
+        <member name="P:MessagesService.Models.PaginationModel.Limit">
+            <summary>
+            Максимальное количество пользователей, которое необходимо вернуть.
+            </summary>
+        </member>
+        <member name="P:MessagesService.Models.PaginationModel.Offset">
+            <summary>
+            Порядковый номер пользователя, начиная с которого необходимо получать информацию.
+            </summary>
+        </member>
+        <member name="T:MessagesService.Models.StatusResponseModel">
+            <summary>
+            Модель ответа сервера на запрос клиента.
+            </summary>
+        </member>
+        <member name="P:MessagesService.Models.StatusResponseModel.Message">
+            <summary>
+            Сообщение, описывающее результат выполненного запроса.
+            </summary>
+        </member>
+        <member name="T:MessagesService.Models.UserModel">
+            <summary>
+            Модель информации о пользователе.
+            </summary>
+        </member>
+        <member name="M:MessagesService.Models.UserModel.#ctor">
+            <summary>
+            Беспараметрический конструктор.
+            </summary>
+        </member>
+        <member name="M:MessagesService.Models.UserModel.#ctor(System.String,System.String)">
+            <summary>
+            Конструктор класса, необходимый для присваивания значений свойствам.
+            </summary>
+            <param name="userName">Имя пользователя.</param>
+            <param name="email">Электронная почта пользователя.</param>
+        </member>
+        <member name="P:MessagesService.Models.UserModel.UserName">
+            <summary>
+            Имя пользователя.
+            </summary>
+        </member>
+        <member name="P:MessagesService.Models.UserModel.Email">
+            <summary>
+            Электронная почта пользователя.
+            </summary>
+        </member>
+        <member name="M:MessagesService.Models.UserModel.ToString">
+            <summary>
+            Переопределенный метод ToString().
+            </summary>
+            <returns>Строка с информацией об актуальных данных о новом пользователе.</returns>
+        </member>
+        <member name="T:MessagesService.Program">
+            <summary>
+            Основной класс программы.
+            </summary>
+        </member>
+        <member name="M:MessagesService.Program.Main(System.String[])">
+            <summary>
+            Основная точка программы, которая запускает ее.
+            </summary>
+            <param name="args">Аргументы.</param>
+        </member>
+        <member name="M:MessagesService.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            Метод для создания и настройки объекта построителя.
+            </summary>
+            <param name="args">Аргументы.</param>
+            <returns>Развернутое веб-приложение.</returns>
+        </member>
+        <member name="T:MessagesService.Startup">
+            <summary>
+            Класс Startup - входная точка в приложение ASP.NET Core.
+            </summary>
+        </member>
+        <member name="M:MessagesService.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Конструктор для присваивания значения свойству.
+            </summary>
+            <param name="configuration">Интерфейс конфигурации.</param>
+        </member>
+        <member name="P:MessagesService.Startup.Configuration">
+            <summary>
+            Свойство, реализующее интерфейс конфигурации.
+            </summary>
+        </member>
+        <member name="T:MessagesService.Validators.EmailValidator">
+            <summary>
+            Статический класс, валидирующий электронный адрес пользователя.
+            </summary>
+        </member>
+        <member name="M:MessagesService.Validators.EmailValidator.IsValidEmailAddress(System.String)">
+            <summary>
+            Проверка корректности (валидности) электронного адреса пользователя.
+            </summary>
+            <param name="emailAddress">Электронный адрес пользователя.</param>
+            <returns>true в случае прохождения проверки и false в противном случае.</returns>
+        </member>
+        <member name="T:MessagesService.Validators.InputFilesDataValidator">
+            <summary>
+            Класс, отвечающий за валидацию данных входных файлов с информацией в json формате.
+            </summary>
+        </member>
+        <member name="M:MessagesService.Validators.InputFilesDataValidator.IsValid(System.String,System.String)">
+            <summary>
+            Валидирует данные входных файлов с информацией в json формате.
+            </summary>
+            <param name="usersFilePath">Путь к файлу с информацией о пользователях.</param>
+            <param name="messagesFilePath">Путь к файлу с информацией о сообщениях.</param>
+            <returns>True, если формат входных файлов корректен, false в противном случае.</returns>
+        </member>
+        <member name="T:MessagesService.Validators.InputFilesDataValidator.UsersFileValidator">
+            <summary>
+            Приватный статический класс, инкапсулирующий валидацию файла с пользователями.
+            </summary>
+        </member>
+        <member name="M:MessagesService.Validators.InputFilesDataValidator.UsersFileValidator.IsValidUsersFile(System.String)">
+            <summary>
+            Валидирует данные о пользователях.
+            </summary>
+            <param name="path">Путь к файлу с информацией о пользователях.</param>
+            <returns>True, если формат входных файлов в json формате, false в противном случае.</returns>
+        </member>
+        <member name="T:MessagesService.Validators.InputFilesDataValidator.MessagesFileValidator">
+            <summary>
+            Приватный статический класс, инкапсулирующий валидацию файла с сообщениями.
+            </summary>
+        </member>
+        <member name="M:MessagesService.Validators.InputFilesDataValidator.MessagesFileValidator.IsValidMessagesFile(System.String)">
+            <summary>
+            Валидирует данные о сообщениях.
+            </summary>
+            <param name="path">Путь к файлу с информацией о сообщениях.</param>
+            <returns>True, если формат входных файлов в json формате, false в противном случае.</returns>
+        </member>
+        <member name="T:MessagesService.Validators.PaginationValidator">
+            <summary>
+            Статический класс, валидирующий пагинацию.
+            </summary>
+        </member>
+        <member name="M:MessagesService.Validators.PaginationValidator.GetValidPagination(MessagesService.Models.PaginationModel,System.Collections.ICollection)">
+            <summary>
+            Получение валидной пагинации в зависимости от поступивших параметров в query-запросе.
+            </summary>
+            <param name="paginationModel">Объект пагинации.</param>
+            <param name="users">Список пользователей.</param>
+            <returns>Значения ограничения по максимальному количеству пользователей и порядковому номеру пользователя, 
+            начиная с которого необходимо получать информацию.</returns>
+        </member>
+    </members>
+</doc>

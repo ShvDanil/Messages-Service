@@ -1,0 +1,64 @@
+/Users/shvetsovdanil/Desktop/MessagesService/MessagesService/bin/Debug/net5.0/appsettings.Development.json
+/Users/shvetsovdanil/Desktop/MessagesService/MessagesService/bin/Debug/net5.0/appsettings.json
+/Users/shvetsovdanil/Desktop/MessagesService/MessagesService/bin/Debug/net5.0/MessagesService.deps.json
+/Users/shvetsovdanil/Desktop/MessagesService/MessagesService/bin/Debug/net5.0/MessagesService.runtimeconfig.json
+/Users/shvetsovdanil/Desktop/MessagesService/MessagesService/bin/Debug/net5.0/MessagesService.runtimeconfig.dev.json
+/Users/shvetsovdanil/Desktop/MessagesService/MessagesService/bin/Debug/net5.0/MessagesService.dll
+/Users/shvetsovdanil/Desktop/MessagesService/MessagesService/bin/Debug/net5.0/ref/MessagesService.dll
+/Users/shvetsovdanil/Desktop/MessagesService/MessagesService/bin/Debug/net5.0/MessagesService.pdb
+/Users/shvetsovdanil/Desktop/MessagesService/MessagesService/bin/Debug/net5.0/Microsoft.OpenApi.dll
+/Users/shvetsovdanil/Desktop/MessagesService/MessagesService/bin/Debug/net5.0/Swashbuckle.AspNetCore.Swagger.dll
+/Users/shvetsovdanil/Desktop/MessagesService/MessagesService/bin/Debug/net5.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/shvetsovdanil/Desktop/MessagesService/MessagesService/bin/Debug/net5.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/shvetsovdanil/Desktop/MessagesService/MessagesService/obj/Debug/net5.0/MessagesService.csproj.AssemblyReference.cache
+/Users/shvetsovdanil/Desktop/MessagesService/MessagesService/obj/Debug/net5.0/MessagesService.GeneratedMSBuildEditorConfig.editorconfig
+/Users/shvetsovdanil/Desktop/MessagesService/MessagesService/obj/Debug/net5.0/MessagesService.AssemblyInfoInputs.cache
+/Users/shvetsovdanil/Desktop/MessagesService/MessagesService/obj/Debug/net5.0/MessagesService.AssemblyInfo.cs
+/Users/shvetsovdanil/Desktop/MessagesService/MessagesService/obj/Debug/net5.0/MessagesService.csproj.CoreCompileInputs.cache
+/Users/shvetsovdanil/Desktop/MessagesService/MessagesService/obj/Debug/net5.0/MessagesService.MvcApplicationPartsAssemblyInfo.cs
+/Users/shvetsovdanil/Desktop/MessagesService/MessagesService/obj/Debug/net5.0/MessagesService.MvcApplicationPartsAssemblyInfo.cache
+/Users/shvetsovdanil/Desktop/MessagesService/MessagesService/obj/Debug/net5.0/staticwebassets/MessagesService.StaticWebAssets.Manifest.cache
+/Users/shvetsovdanil/Desktop/MessagesService/MessagesService/obj/Debug/net5.0/staticwebassets/MessagesService.StaticWebAssets.xml
+/Users/shvetsovdanil/Desktop/MessagesService/MessagesService/obj/Debug/net5.0/scopedcss/bundle/MessagesService.styles.css
+/Users/shvetsovdanil/Desktop/MessagesService/MessagesService/obj/Debug/net5.0/MessagesService.RazorTargetAssemblyInfo.cache
+/Users/shvetsovdanil/Desktop/MessagesService/MessagesService/obj/Debug/net5.0/MessagesService.dll
+/Users/shvetsovdanil/Desktop/MessagesService/MessagesService/obj/Debug/net5.0/ref/MessagesService.dll
+/Users/shvetsovdanil/Desktop/MessagesService/MessagesService/obj/Debug/net5.0/MessagesService.pdb
+/Users/shvetsovdanil/Desktop/MessagesService/MessagesService/obj/Debug/net5.0/MessagesService.genruntimeconfig.cache
+/Users/shvetsovdanil/Desktop/MessagesService/MessagesService/bin/Debug/net5.0/Swashbuckle.AspNetCore.Annotations.dll
+/Users/shvetsovdanil/Desktop/MessagesService/MessagesService/bin/Debug/net5.0/MessagesService.xml
+/Users/shvetsovdanil/Desktop/MessagesService/MessagesService/bin/Debug/net5.0/JetBrains.Annotations.dll
+/Users/shvetsovdanil/Desktop/MessagesService/MessagesService/bin/Debug/net5.0/Newtonsoft.Json.dll
+/Users/shvetsovdanil/Desktop/учеба/C# repository/MessagesService/MessagesService/bin/Debug/net5.0/appsettings.Development.json
+/Users/shvetsovdanil/Desktop/учеба/C# repository/MessagesService/MessagesService/bin/Debug/net5.0/appsettings.json
+/Users/shvetsovdanil/Desktop/учеба/C# repository/MessagesService/MessagesService/bin/Debug/net5.0/MessagesService.xml
+/Users/shvetsovdanil/Desktop/учеба/C# repository/MessagesService/MessagesService/bin/Debug/net5.0/MessagesService.deps.json
+/Users/shvetsovdanil/Desktop/учеба/C# repository/MessagesService/MessagesService/bin/Debug/net5.0/MessagesService.runtimeconfig.json
+/Users/shvetsovdanil/Desktop/учеба/C# repository/MessagesService/MessagesService/bin/Debug/net5.0/MessagesService.runtimeconfig.dev.json
+/Users/shvetsovdanil/Desktop/учеба/C# repository/MessagesService/MessagesService/bin/Debug/net5.0/MessagesService.dll
+/Users/shvetsovdanil/Desktop/учеба/C# repository/MessagesService/MessagesService/bin/Debug/net5.0/ref/MessagesService.dll
+/Users/shvetsovdanil/Desktop/учеба/C# repository/MessagesService/MessagesService/bin/Debug/net5.0/MessagesService.pdb
+/Users/shvetsovdanil/Desktop/учеба/C# repository/MessagesService/MessagesService/bin/Debug/net5.0/JetBrains.Annotations.dll
+/Users/shvetsovdanil/Desktop/учеба/C# repository/MessagesService/MessagesService/bin/Debug/net5.0/Microsoft.OpenApi.dll
+/Users/shvetsovdanil/Desktop/учеба/C# repository/MessagesService/MessagesService/bin/Debug/net5.0/Newtonsoft.Json.dll
+/Users/shvetsovdanil/Desktop/учеба/C# repository/MessagesService/MessagesService/bin/Debug/net5.0/Swashbuckle.AspNetCore.Annotations.dll
+/Users/shvetsovdanil/Desktop/учеба/C# repository/MessagesService/MessagesService/bin/Debug/net5.0/Swashbuckle.AspNetCore.Swagger.dll
+/Users/shvetsovdanil/Desktop/учеба/C# repository/MessagesService/MessagesService/bin/Debug/net5.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/shvetsovdanil/Desktop/учеба/C# repository/MessagesService/MessagesService/bin/Debug/net5.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/shvetsovdanil/Desktop/учеба/C# repository/MessagesService/MessagesService/obj/Debug/net5.0/MessagesService.csproj.AssemblyReference.cache
+/Users/shvetsovdanil/Desktop/учеба/C# repository/MessagesService/MessagesService/obj/Debug/net5.0/MessagesService.GeneratedMSBuildEditorConfig.editorconfig
+/Users/shvetsovdanil/Desktop/учеба/C# repository/MessagesService/MessagesService/obj/Debug/net5.0/MessagesService.AssemblyInfoInputs.cache
+/Users/shvetsovdanil/Desktop/учеба/C# repository/MessagesService/MessagesService/obj/Debug/net5.0/MessagesService.AssemblyInfo.cs
+/Users/shvetsovdanil/Desktop/учеба/C# repository/MessagesService/MessagesService/obj/Debug/net5.0/MessagesService.csproj.CoreCompileInputs.cache
+/Users/shvetsovdanil/Desktop/учеба/C# repository/MessagesService/MessagesService/obj/Debug/net5.0/MessagesService.MvcApplicationPartsAssemblyInfo.cs
+/Users/shvetsovdanil/Desktop/учеба/C# repository/MessagesService/MessagesService/obj/Debug/net5.0/MessagesService.MvcApplicationPartsAssemblyInfo.cache
+/Users/shvetsovdanil/Desktop/учеба/C# repository/MessagesService/MessagesService/obj/Debug/net5.0/staticwebassets/MessagesService.StaticWebAssets.Manifest.cache
+/Users/shvetsovdanil/Desktop/учеба/C# repository/MessagesService/MessagesService/obj/Debug/net5.0/staticwebassets/MessagesService.StaticWebAssets.xml
+/Users/shvetsovdanil/Desktop/учеба/C# repository/MessagesService/MessagesService/obj/Debug/net5.0/scopedcss/bundle/MessagesService.styles.css
+/Users/shvetsovdanil/Desktop/учеба/C# repository/MessagesService/MessagesService/obj/Debug/net5.0/MessagesService.RazorTargetAssemblyInfo.cache
+/Users/shvetsovdanil/Desktop/учеба/C# repository/MessagesService/MessagesService/obj/Debug/net5.0/MessagesService.dll
+/Users/shvetsovdanil/Desktop/учеба/C# repository/MessagesService/MessagesService/obj/Debug/net5.0/ref/MessagesService.dll
+/Users/shvetsovdanil/Desktop/учеба/C# repository/MessagesService/MessagesService/obj/Debug/net5.0/MessagesService.pdb
+/Users/shvetsovdanil/Desktop/учеба/C# repository/MessagesService/MessagesService/obj/Debug/net5.0/MessagesService.genruntimeconfig.cache
+/Users/shvetsovdanil/Desktop/учеба/C# repository/MessagesService/MessagesService/bin/Debug/net5.0/Data/messagesData.json
+/Users/shvetsovdanil/Desktop/учеба/C# repository/MessagesService/MessagesService/bin/Debug/net5.0/Data/usersData.json

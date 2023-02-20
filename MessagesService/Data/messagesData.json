@@ -1,0 +1,26 @@
+[
+  {
+    "Subject": "Это тема сообщения от User1.",
+    "Message": "Это сообщение от User1! Здравствуйте!",
+    "SenderId": "User1@example.com",
+    "ReceiverId": "User3@example.com"
+  },
+  {
+    "Subject": "Это тема сообщения от User2.",
+    "Message": "Это сообщение от User2! Здравствуйте!",
+    "SenderId": "User2@example.com",
+    "ReceiverId": "User4@example.com"
+  },
+  {
+    "Subject": "Это тема сообщения от User3.",
+    "Message": "Это сообщение от User3! Здравствуйте!",
+    "SenderId": "User3@example.com",
+    "ReceiverId": "User2@example.com"
+  },
+  {
+    "Subject": "Это тема сообщения от User4.",
+    "Message": "Это сообщение от User4! Здравствуйте!",
+    "SenderId": "User4@example.com",
+    "ReceiverId": "User3@example.com"
+  }
+]
